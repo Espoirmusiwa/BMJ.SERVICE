@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription | B.M.J SERVICE</title>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-NV3A8+4U+o0kWPS9FjMZk1A76fAqjH4fQ5q5b8+X7Tfp8rZ4k0Y3+G9QbK2xHxYl7zM0d6OqGhl/mM6XGQJX5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+
+        body {
+            background: linear-gradient(rgba(11,28,45,0.6), rgba(11,28,45,0.6)),
+                        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        /* HEADER */
+        header {
+            background-color: rgba(11,28,45,0.85);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        header h1 { font-size: 22px; }
+        .menu-icon { font-size: 28px; cursor: pointer; }
+
+        .menu {
+            position: absolute;
+            top: 60px;
+            right: 8%;
+            background-color: rgba(255,255,255,0.95);
+            width: 180px;
+            border-radius: 6px;
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .menu a {
+            padding: 15px;
+            text-decoration: none;
+            color: #0b1c2d;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .menu a:hover { background-color: #f4f6f8; }
+
+        /* FORM CONTAINER */
+        .container {
+            max-width: 500px;
+            background-color: rgba(0,0,0,0.6);
+            margin: 80px auto;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .container h2 { text-align: center; margin-bottom: 20px; font-size: 28px; color: #ff9800; }
+        .container p { text-align: center; margin-bottom: 25px; font-size: 14px; }
+
+        label { margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+        input {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+        input:focus { outline: none; border-color: #ff9800; }
+
+        .btn-inscrire {
+            display: block;
+            width: 100%;
+            background-color: #ff9800;
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+            padding: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-inscrire:hover { background-color: #e68900; transform: translateY(-3px); }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .login-link a { color: #ff9800; font-weight: bold; text-decoration: none; }
+
+        /* FOOTER & Réseaux sociaux */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 30px 8%;
+            background-color: rgba(11,28,45,0.85);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            font-size: 28px;
+            transition: transform 0.2s;
+        }
+        .social-icons a:hover { transform: translateY(-3px); }
+
+        .social-icons a.instagram { color: #E1306C; }
+        .social-icons a.tiktok { color: #000; }
+        .social-icons a.whatsapp { color: #25D366; }
+        .social-icons a.youtube { color: #FF0000; }
+        .social-icons a.linkedin { color: #0077B5; }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>B.M.J SERVICE</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="inscription.html">Inscription</a>
+        <a href="connexion.html">Connexion</a>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Créer un compte</h2>
+    <p>Inscrivez-vous pour accéder aux formations et aux livres professionnels.</p>
+
+    <form>
+        <label for="nom"></label></label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
+
+        <label for="email"</label>
+        <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+
+        <label for="confirm"></label>
+        <input type="password" id="confirm" name="confirm" placeholder="Confirmez le mot de passe" required>
+
+        <a href="dashboard.html" class="btn-inscrire">s'inscrire</a>
+    </form>
+
+    <div class="login-link">
+        Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a>
+    </div>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/greatman9609?utm_source=qr&igsh=OTVma2c3N2FyeDc5" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@bmjreussir?_r=1&_t=ZM-930CaOPJ3CV" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/243993585711" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://youtube.com/@justinmussiwa?si=9NxCJ6VUf39Je03k" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/posts/justin-mussiwa-167b8a331_cest-%C3%A0-vous-de-prendre-conscience-activity-7341023134810017792-ogV-?utm_source=share&utm_medium=member_android" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+</script>
+</body>
+</html>

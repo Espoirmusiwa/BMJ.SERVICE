@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion | B.M.J SERVICE</title>
+<style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, Helvetica, sans-serif;}
+    body {
+        background: linear-gradient(rgba(11,28,45,0.7), rgba(11,28,45,0.7)),
+                    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        min-height: 100vh;
+    }
+    header {
+        background-color: rgba(11,28,45,0.9);
+        padding: 15px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    header h1 { font-size: 22px; color: #fff; }
+    .menu-icon { font-size: 28px; cursor: pointer; color: #fff; }
+    .menu {
+        position: absolute;
+        top: 65px;
+        right: 8%;
+        background-color: #fff;
+        width: 180px;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+    }
+    .menu a {
+        padding: 15px;
+        text-decoration: none;
+        color: #0b1c2d;
+        font-weight: bold;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+    .menu a:hover { background-color: #f4f6f8; }
+
+    .container {
+        max-width: 450px;
+        background-color: rgba(255,255,255,0.1);
+        margin: 80px auto;
+        padding: 40px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .container h2 { text-align: center; margin-bottom: 25px; color:#fff; }
+    .container p { text-align: center; margin-bottom: 30px; font-size: 14px; color:#eee; }
+
+    form { display: flex; flex-direction: column; }
+    label { margin-bottom: 5px; font-weight: bold; font-size: 14px; color:#fff; }
+    input {
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+    input:focus { outline:none; border-color:#ff9800; }
+
+    .btn-connexion {
+        background-color:#ff9800;
+        border:none;
+        padding:14px;
+        font-size:16px;
+        font-weight:bold;
+        cursor:pointer;
+        border-radius:5px;
+        color:#000;
+        transition: all 0.2s;
+    }
+    .btn-connexion:hover { background-color:#e68900; transform: translateY(-2px); }
+
+    .forgot-password {
+        text-align:center;
+        margin-top:10px;
+    }
+    .forgot-password a {
+        color:#ff9800;
+        text-decoration:none;
+        font-weight:bold;
+    }
+
+    .socials {
+        display:flex;
+        justify-content:center;
+        margin-top:30px;
+        gap:20px;
+    }
+    .socials a img {
+        width:35px;
+        transition: transform 0.2s;
+    }
+    .socials a img:hover { transform: scale(1.1); }
+
+    footer {
+        text-align:center;
+        padding:20px;
+        margin-top:20px;
+        color:#ccc;
+        font-size:14px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>B.M.J SERVICE</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="inscription.html">Inscription</a>
+        <a href="connexion.html">Connexion</a>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Connexion à votre compte</h2>
+    <p>Entrez votre email et mot de passe pour accéder à votre tableau de bord.</p>
+
+    <form id="loginForm">
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" required>
+
+        <button type="submit" class="btn-connexion">Se connecter</button>
+    </form>
+
+    <div class="forgot-password">
+        <a href="reset-password.html">Mot de passe oublié ?</a>
+    </div>
+</div>
+
+<div class="socials">
+    <a href="https://www.instagram.com/greatman9609?utm_source=qr&igsh=OTVma2c3N2FyeDc5" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@bmjreussir?_r=1&_t=ZM-930CaOPJ3CV" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok">
+    </a>
+    <a href="https://wa.me/243993585711" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+    <a href="https://youtube.com/@justinmussiwa?si=9NxCJ6VUf39Je03k" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
+    <a href="https://www.linkedin.com/posts/justin-mussiwa-167b8a331_cest-%C3%A0-vous-de-prendre-conscience-activity-7341023134810017792-ogV-?utm_source=share&utm_medium=member_android&rcm=ACoAAFOlYF8BCTITKFVpRsSSQmMzECBb2wI6YyE" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a>
+</div>
+
+<footer>
+    © 2026 B.M.J SERVICE – Plateforme de formation professionnelle
+</footer>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+
+// Simuler la vérification d'un compte (à remplacer par backend)
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Exemple simple, tu peux remplacer par une vraie vérification backend
+    const existingUser = {email: "user@example.com", password:"123456"};
+
+    if(email === existingUser.email && password === existingUser.password){
+        alert("Connexion réussie !");
+        window.location.href = "dashboard.html";
+    } else if(email !== existingUser.email){
+        alert("Adresse email non connue. Veuillez vous inscrire.");
+    } else {
+        alert("Mot de passe incorrect. Cliquez sur 'Mot de passe oublié' si nécessaire.");
+    }
+});
+</script>
+
+</body>
+</html>
